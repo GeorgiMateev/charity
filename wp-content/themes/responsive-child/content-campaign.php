@@ -15,9 +15,11 @@
 			the_content( __(  'Read more &#8250;', 'responsive' ) );
 			?>
 			<h2>Custom Fields</h2>
-					<strong>Avatar:</strong> <img src="<?php print_custom_field('avatar:to_image_src'); ?>" /><br />
-					<strong>Need</strong> <?php print_custom_field('need'); ?><br />
-			
+                        <img src="<?php print_custom_field('avatar:to_image_src'); ?>" /><br />
+                        <strong>Need</strong> <?php print_custom_field('need'); ?><br />
+                        <strong>Donations</strong> <?php print_custom_field('donations'); ?><br />                        
+                        
+                        <a href='<?php echo site_url() . "/new-donation?campaign=" . get_the_ID(); ?>' >Дари!</a>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 </article><!-- #post-## -->
