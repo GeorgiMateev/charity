@@ -104,7 +104,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=321 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=359 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,7 +161,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -269,4 +269,4 @@ CREATE TABLE `wp_users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-07  8:46:19
+-- Dump completed on 2014-04-14  6:16:05

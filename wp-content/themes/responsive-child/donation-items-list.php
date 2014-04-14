@@ -1,30 +1,21 @@
 <?php
 
-// Exit if accessed directly
-if( !defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-/**
-   Template Name: Campaigns   
+/*
+ * Used to display list of items that have been or needed to be donated.
  */
+?>
 
-get_header(); ?>
+<?php $donation_items_loop = new WP_Query( array( 'post_type' => 'donation-item', 'posts_per_page' => 100, 'parent' => get_the_ID() ) );?>
 
-<div id="content-archive" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
-
-	<?php $loop = new WP_Query( array( 'post_type' => 'campaign', 'posts_per_page' => 100 ) );?>
-	<?php if( $loop->have_posts() ) : ?>
+<?php if( $donation_items_loop->have_posts() ) : ?>
 
 		<?php get_template_part( 'loop-header' ); ?>
 
-		<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+		<?php while( $donation_items_loop->have_posts() ) : $donation_items_loop->the_post(); ?>
 
 			<?php responsive_entry_before(); ?>
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div id="item-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php responsive_entry_top(); ?>
-
-				<?php get_template_part( 'post-meta' ); ?>
 
 				<div class="post-entry">
 					<?php if( has_post_thumbnail() ) : ?>
@@ -33,16 +24,16 @@ get_header(); ?>
 						</a>
 					<?php endif; ?>
 					
-                                        <?php get_template_part('content', 'campaign' ); ?>
+                                        <?php get_template_part('content', 'donation-item' ); ?>
                                     
 					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
 				</div>
 				<!-- end of .post-entry -->
 
-				<?php get_template_part('post-data' ); ?>				
+				<?php //get_template_part('post-data' ); ?>				
 
 				<?php responsive_entry_bottom(); ?>
-			</div><!-- end of #post-<?php the_ID(); ?> -->
+			</div><!-- end of #item-<?php the_ID(); ?> -->
 			<?php responsive_entry_after(); ?>
 
 		<?php
@@ -56,8 +47,3 @@ get_header(); ?>
 
 	endif;
 	?>
-
-</div><!-- end of #content-archive -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
