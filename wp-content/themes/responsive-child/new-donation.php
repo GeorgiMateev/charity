@@ -12,7 +12,6 @@ if( !defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
-<script src="new-donation.js"></script>
 
 <div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
 
@@ -39,7 +38,7 @@ get_header(); ?>
 
                             <div class="donation-item-wrapper" id="donation-item-wrapper-<?php the_ID(); ?>" style="display: none">
                                 <label>Количество </label><input name="amount-item-<?php the_ID(); ?>" type="number"><br />
-                                <label>Описание </label><textarea name="description-item-<?php the_ID(); ?>"/>
+                                <label>Описание </label><textarea name="description-item-<?php the_ID(); ?>"></textarea>
                             </div>
                         </li>
                     <?php 
