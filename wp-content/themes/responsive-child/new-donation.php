@@ -20,6 +20,8 @@ get_header(); ?>
     <?php if($_SERVER['REQUEST_METHOD'] == 'POST'): ?>
         <?php echo $_POST["donation_item"]; ?>
         <?php echo $_POST["donation_items_count"]; ?>
+    
+        
     <?php else: ?>
         <form action="" method="POST">
             <?php $campaign_id = $_GET["campaign"];
@@ -29,6 +31,7 @@ get_header(); ?>
                                                       'meta_value' => $campaign_id ) );?>
             
             <?php if( $donation_items_loop->have_posts() ) : ?>
+                <input type="text"/>
                 <h3>Изберете какво ще дарите</h3>
                 <ul>
                     <?php while( $donation_items_loop->have_posts() ) : $donation_items_loop->the_post(); ?>
