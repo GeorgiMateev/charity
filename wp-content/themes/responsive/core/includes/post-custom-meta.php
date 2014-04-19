@@ -186,7 +186,12 @@ function responsive_add_layout_meta_box( $post ) {
 	$priority = apply_filters( 'responsive_layout_meta_box_priority', 'default' ); // 'high', 'core', 'low', 'default'
 
 	add_meta_box(
-		'responsive_layout', __( 'Layout', 'responsive' ), 'responsive_layout_meta_box', 'post', $context, $priority
+		'responsive_layout',
+		__( 'Layout', 'responsive' ),
+		'responsive_layout_meta_box',
+		'post',
+		$context,
+		$priority
 	);
 }
 
@@ -216,12 +221,12 @@ function responsive_layout_meta_box() {
 	$valid_layouts = responsive_get_valid_layouts();
 	?>
 	<p>
-		<input type="radio" name="_responsive_layout" <?php checked( 'default' == $layout ); ?> value="default"/>
-		<label><?php _e( 'Default', 'responsive' ); ?></label><br/>
+		<select name="_responsive_layout">
 		<?php foreach( $valid_layouts as $slug => $name ) { ?>
-			<input type="radio" name="_responsive_layout" <?php checked( $slug == $layout ); ?> value="<?php echo $slug; ?>"/>
-			<label><?php echo $name; ?></label><br/>
+			<?php $selected = selected( $layout, $slug, false ); ?>
+			<option value="<?php echo $slug; ?>" <?php echo $selected; ?>><?php echo $name; ?></option>
 		<?php } ?>
+		</select>
 	</p>
 <?php
 }
