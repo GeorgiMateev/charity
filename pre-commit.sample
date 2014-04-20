@@ -1,0 +1,10 @@
+#!/bin/bash -e
+# -e means exit if any command fails
+DBHOST=127.0.0.1
+DBUSER=root
+DBPASS=""
+DBNAME=charity
+C:\\xampp\\mysql\\bin\\mysqldump.exe --add-drop-table -h $DBHOST -u $DBUSER -p $DBPASS $DBNAME > schema.sql
+sleep 2
+git add schema.sql
+echo "performed 'git add schema.sql' command to add the db schema to the staging area"
