@@ -73,7 +73,7 @@ if( !defined( 'ABSPATH' ) ) {
 		<?php if( get_header_image() != '' ) : ?>
 
 			<div id="logo">
-				<a href="<?php echo home_url( '/' ); ?>"><img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
+				<a href="<?php echo home_url( '/' ); ?>"><img src="<?php header_image(); ?>" width="" height="" alt="<?php bloginfo( 'name' ); ?>"/></a>
 			</div><!-- end of #logo -->
 
 		<?php endif; // header image was removed ?>
