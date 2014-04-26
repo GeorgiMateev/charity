@@ -17,9 +17,8 @@
             <?php the_content( __(  'Read more &#8250;', 'responsive' ) );	?>
             
             <h4>We need:</h4>
-            <?php get_template_part('donation-items-list' ); ?>
-
-            <a href='<?php echo site_url() . "/new-donation?campaign=" . $current_post_id; ?>' >Дари!</a>
+            <?php get_template_part("donation-items-form"); ?>
+<!--            <a href='<?php //echo site_url() . "/new-donation?campaign=" . $current_post_id; ?>' >Дари!</a>-->
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 </article><!-- #post-## -->
