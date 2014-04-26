@@ -18,7 +18,8 @@
             <?php the_content( __(  'Read more &#8250;', 'responsive' ) );	?>
             <img src="<?php print_custom_field('avatar:to_image_src'); ?>" /><br />
             <p><?php print_custom_field('description'); ?></p>
-            <span>Needed items: </span><span><?php print_custom_field('count'); ?></span>
+            <span>Needed items: </span><span><?php print_custom_field('total_amount'); ?></span>
+            <span>Collected items: </span><span><?php print_custom_field('current_amount'); ?></span>
                         
 	</div><!-- .entry-content -->
 	<?php endif; ?>
