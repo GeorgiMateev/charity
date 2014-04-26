@@ -11,6 +11,8 @@ if( !defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
+
+
 <div id="content-archive" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
 
 	<?php $loop = new WP_Query( array( 'post_type' => 'campaign', 'posts_per_page' => 100 ) );?>
@@ -18,6 +20,8 @@ get_header(); ?>
 
 		<?php get_template_part( 'loop-header' ); ?>
 
+                <?php the_widget( 'WP_Widget_Categories'); ?> 
+    
 		<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 
 			<?php responsive_entry_before(); ?>
