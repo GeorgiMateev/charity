@@ -55,7 +55,7 @@ body
 {
 	width:300px;
 	float:left;		
-	height:500px;
+	height:540px;
 	margin:10px;	
 
 }
@@ -68,15 +68,12 @@ body
 	height:100%;
 	margin-top:75px;
 }
-
-.progress-wrapper
+#content-archive:hover
 {
-	width:100px;
-	height:100px;	
-	background-color:#ccc;
-	position:absolute;
-	border-radius:50%;
+  cursor:pointer;
+
 }
+
 .content-wrapper h2 a 
 {
 	font-size:22px;
@@ -85,24 +82,27 @@ body
 .progress-wrapper
 {
   width:300px;
-  height:410px;
+  height:485px;
   background-color:#ccc;
   position:relative;
   border-radius:10px;
   position:relative;
-  
+  box-shadow:0px 0px 10px #ccc;
+  border:1px solid #fff;
+
 }
 .progress-slider
 {
   background-color:lightgreen;
   width:300px;
-  height:355px;
+  height:430px;
   opacity:1;
   z-index:50;
   position:absolute;
   z-index:1;
   padding-bottom:0px;
   margin-top:55px;
+
 }
 .progress-circle-outer
 {
@@ -114,6 +114,8 @@ body
   top:-55px;
   left:100px;
   z-index:0;
+  box-shadow:0px 0px 10px #bbb;
+
 }
 .progress-circle-inner
 {
@@ -126,12 +128,12 @@ body
   left:105px;
   z-index:300;
   overflow:hidden;
-
+  opacity:0.5;
 }
 .progress-inner
 {
   width:290px;
-  height:350px;
+  height:425px;
   background-color:#fff;
   display:block;
   position:absolute;
@@ -142,6 +144,7 @@ body
   z-index:100;
   z-index:3;
   overflow:hidden;
+
 }
 .slider-bg
 {
@@ -160,6 +163,28 @@ body
   left:0px;
   z-index:400;
   width:300px;
-	
- 
+}
+.progress-inner
+{
+  box-sizing:border-box;
+  padding:10px;
+}
+.progress-inner h2
+{
+  padding:0;
+  margin:0;
+}
+.progress-inner div article img 
+{
+  border-radius:3px;
+  height:200px;
+  width:100%;
+  display:block;
+}
+.progress-inner p
+{
+  padding:0px;
+  margin:0;
+  margin-top:-6px;
+
 }
