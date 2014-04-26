@@ -34,7 +34,7 @@
 
 <h2><?php echo generatePassword(); ?></h2>
 
-<img src="<?php echo site_url(); ?>/wp-content/uploads/2014/04/qrcode.jpg" />
+<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2014/04/qrcode.jpg" />  -->
 
 <p>Изпратете този код заедно с доставката, за да сме сигурни, че даренето е получено.</p>
 
