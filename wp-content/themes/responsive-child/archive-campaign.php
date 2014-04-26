@@ -33,7 +33,7 @@ get_header(); ?>
 						</a>
 					<?php endif; ?>
 					
-                                        <?php get_template_part('content', 'campaign' ); ?>
+                                        <?php get_template_part('campaign-preview' ); ?>
                                     
 					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
 				</div>
