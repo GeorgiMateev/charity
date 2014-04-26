@@ -59,5 +59,5 @@ get_header(); ?>
 
 </div><!-- end of #content-archive -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
