@@ -21,8 +21,8 @@
                     <span><?php the_title(); ?></span>
                     <span><?php the_content( __(  'Read more &#8250;', 'responsive' ) ); ?></span>
 
-                    <span>Needed items: </span><span><?php print_custom_field('total_amount'); ?></span>
-                    <span>Collected items: </span><span id="current-amount-<?php the_ID(); ?>"><?php print_custom_field('current_amount'); ?></span>
+                    <span>Необходим брой: </span><span><?php print_custom_field('total_amount'); ?></span>
+                    <span>Събрани: </span><span id="current-amount-<?php the_ID(); ?>"><?php print_custom_field('current_amount'); ?></span>
 
                     <input class="select-donation-item" name="donate-<?php the_ID(); ?>" type="checkbox" />
 

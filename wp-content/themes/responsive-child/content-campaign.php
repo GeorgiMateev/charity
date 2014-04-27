@@ -17,7 +17,7 @@ if(isset($_POST)) {
     }
 } 
 ?>
-
+<div class='desc-wrapper'>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( is_search() ) : ?>
 	<div class="entry-summary">
@@ -40,7 +40,7 @@ if(isset($_POST)) {
                 </form>
             <?php endif; ?>
             
-            <h4>We need:</h4>
+            <h4>Има нужда от:</h4>
             <?php get_template_part("donation-items-form"); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
@@ -79,5 +79,6 @@ if(isset($_POST)) {
                     }
                 });
         </script>
-</article><!-- #post-## -->
+</article>
+</div><!-- #post-## -->
 <?php get_sidebar(); ?>

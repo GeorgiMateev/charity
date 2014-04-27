@@ -26,7 +26,9 @@
 
         </div>
         <div class='progress-circle-outer'></div> 
+
         <div class="progress-circle-inner"></div>
+        <div class='percent'>70%</div>
         <img src='http://3cky.com/slider-bg.png' alt='slider background' class='slider-bg' />
         <img src='http://3cky.com/slider-bg-up.png' alt='slider background up' class='slider-bg-up' />
 </div>  
