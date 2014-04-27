@@ -20,9 +20,9 @@
             
             
             <div class="post-data tags-wrapper">
-                <span class="addresses-icon"></span><div class="addresses-wrapper"><?php echo get_custom_field('addresses')[0]; ?></div>
-		<span class="cat-icon"></span><?php printf( __( 'Категория: %s', 'responsive' ), get_the_category_list( ', ' ) ); ?>
-                <span class="end-date-icon"></span><div class="end-date-wrapper"><?php echo get_custom_field('end_date'); ?></div>
+                <div class="addresses-wrapper"><span class="addresses-icon"></span><?php echo get_custom_field('addresses')[0]; ?></div>
+		<div class='cat-wrapper'><span class="cat-icon"></span><?php printf( __( 'Категория: %s', 'responsive' ), get_the_category_list( ', ' ) ); ?></div>
+               <div class="end-date-wrapper"> <span class="end-date-icon"></span><?php echo get_custom_field('end_date'); ?></div>
             </div>
             
             

@@ -234,3 +234,40 @@ body
   bottom:0px;
 
 }
+.tags-wrapper .addresses-icon, .cat-icon, .end-date-icon
+{
+  float:left;
+  display:block;
+  width:16px;
+  height:16px;
+  background-size:contain;
+  background-repeat:no-repeat;
+  margin-right:5px;
+  margin-top:2px;
+ 
+}
+.tags-wrapper div
+{
+  margin-bottom:10px;
+
+}
+.addresses-icon
+{
+  background-image:url('loc-icon.png');
+ 
+}
+.cat-icon
+{
+  background-image:url('cat-icon.png');
+
+}
+.end-date-icon
+{
+  background-image:url('time-icon.png');
+}
+.camp-desc-wrap p
+{
+  height:67px;
+  overflow:hidden;
+
+}
