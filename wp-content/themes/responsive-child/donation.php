@@ -16,7 +16,8 @@
     $post = get_post($campaign_id);
 ?>
 
-<h1>Благодарим ви, че помагате!</h1>
+<div class="thank-wrap">
+<h1>Благодарим Ви за помощта!</h1>
 
 <?php
     function generatePassword($length = 8) {
@@ -31,14 +32,14 @@
         return $result;
     }
 ?>
-
-<h2><?php echo generatePassword(); ?></h2>
+<p class='code'>Вашият код за потвърждение е:</p>
+<h2 class='the-code'><?php echo generatePassword(); ?></h2>
 
 <!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2014/04/qrcode.jpg" />  -->
 
-<p>Изпратете този код заедно с доставката, за да сме сигурни, че даренето е получено.</p>
+<p class='blue'>Изпратете този код заедно с доставката, за да сме сигурни, че даренето е получено.</p>
 
-<p>Може да изпратите вашето дарение на някой от посочените адреси:</p>
+<p class='blue'>Може да изпратите вашето дарение на някой от посочените адреси:</p>
 
 <ul>
     <?php foreach(get_custom_field("addresses") as $value){ 
@@ -68,6 +69,7 @@
             <input type="submit" />
         </div>
     </div>
+    
 <?php endif; ?>
 
 <script type="text/javascript">

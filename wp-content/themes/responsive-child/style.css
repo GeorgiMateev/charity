@@ -209,7 +209,7 @@ body
   position:absolute;
   z-index:50000;
   border-radius:50%;
-  font-size:40px;
+  font-size:36px;
   line-height:90px;
   text-align:center;
   width:90px;
@@ -333,8 +333,6 @@ body
   line-height:40px;
   display:inline-block;
   margin-bottom:0px;
-  float:right;
-  width:270px;
   padding-bottom:20px;
   height:auto;
   margin-top:0px;
@@ -387,4 +385,87 @@ body
 {
     margin: 20px 0 0px 0;
 }
+.desc-wrapper h4 ,.post-title ,.need-title
+{
+  color:#0999d2;;
 
+}
+.need-title
+{
+  font-size:18px;
+  font-weight:bold;
+
+}
+.need-count , .need-has ,.want-to
+{
+ 
+  font-size:16px;
+  display:block;
+  color:#0999d2;
+  margin-bottom:10px;
+}
+
+.need-count + span 
+{
+  font-weight:bold;
+  font-size:20px;
+  margin:10px;
+  margin-left:0;
+}
+.need-has + span 
+{
+  font-size:20px;
+  font-weight:bold;
+
+}
+.need-title
+{
+  margin-bottom:10px;
+  border-bottom:1px solid #0999d2;
+}
+.need-item
+{
+  margin-bottom:30px;
+    list-style:none;
+}
+span.need-count
+{
+  margin-top:10px;
+
+}
+.amount-label
+{
+  margin-right:10px;
+
+}
+.amount-item-box
+{
+  width:80px;
+
+}
+.code 
+{
+  font-size:18px;
+
+}
+.thank-wrap
+{
+  width:80%;
+  background-color:#fff;
+  padding:20px;
+  margin-top:20px;  
+}
+.the-code
+{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  line-height:40px;
+  border:3px dashed #ccc;
+  width:200px;
+  padding:5px;
+  text-align:center;
+}
+.blue
+{
+  color:#0999d2;
+}

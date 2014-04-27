@@ -55,6 +55,24 @@ get_header(); ?>
 	?>
 
 </div><!-- end of #content-archive -->
+<script type="text/javascript">
+    $(function(){
+      
+        var values=$('.percent');
+        for(var i=0; i<values.length; i++)
+        {
+          var random= Math.floor((Math.random()*100)+1);
+           $(values[i]).text(random + '%');
 
+           $(values[i]).siblings(".progress-slider").transition({marginTop:-(random-45)+'px'});
+           $(values[i]).siblings(".progress-slider").transition({paddingBottom:random +10+'px'});      
+        }
+
+  
+
+
+    });
+
+</script>
 
 <?php get_footer(); ?>

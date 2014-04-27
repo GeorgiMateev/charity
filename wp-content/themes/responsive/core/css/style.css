@@ -2569,7 +2569,17 @@ a.black:hover {
 .required {
 	color: #d5243f;
 }
+@media screen and (min-width:1000px)
+{
+	.sorting-wrapper
+{
+	position:fixed;
+	right:0px;
+	top:40px;
 
+}
+
+}
 /* =WooCommerce
 -------------------------------------------------------------- */
 #breadcrumb {
@@ -2613,11 +2623,33 @@ table.shop_table {
 	table.shop_table {
 		font-size: 10px;
 	}
+	.sorting-wrapper
+	{
+		font-size:16px;
+		margin:0 auto;
+		margin-left:0px;
+	}
+
 }
 
 @media screen and (max-width:400px) {
 	table.shop_table {
 		font-size: 8px;
+	}
+	.sorting-wrapper
+	{	
+		font-size:18px;
+		position:relative;
+		width:100%;
+		margin:0 auto;
+		background-color:#fff;
+		border-radius:5px;
+		padding-left:20px;
+	}
+	.sorting wrapper ul ul
+	{
+		line-height:24px;
+
 	}
 }
 
