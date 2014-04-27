@@ -16,13 +16,17 @@
             
             <img src="<?php print_custom_field('avatar:to_image_src'); ?>" /><br />
 			
-            <?php the_content( __(  'Read more &#8250;', 'responsive' ) );	?>		
-            <?php echo get_custom_field('addresses')[0]; ?>
+            <div class="camp-desc-wrap"><?php the_content( __(  'Read more &#8250;', 'responsive' ) );	?></div>
+            
             
             <div class="post-data tags-wrapper">
-		<span class="tag-icon"></span><?php the_tags( __( 'Тагове:', 'responsive' ) . ' ', ', ', '<br />' ); ?>
+                <span class="addresses-icon"></span><div class="addresses-wrapper"><?php echo get_custom_field('addresses')[0]; ?></div>
+		<span class="tag-icon"></span><?php the_tags( __( 'Тагове:', 'responsive' ) . ' ', ', ' ); ?>
 		<span class="cat-icon"></span><?php printf( __( 'Категория: %s', 'responsive' ), get_the_category_list( ', ' ) ); ?>
+                <span class="end-date-icon"></span><div class="end-date-wrapper"><?php echo get_custom_field('end_date'); ?></div>
             </div>
+            
+            
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 </article><!-- #post-## -->
