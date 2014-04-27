@@ -27,7 +27,7 @@ get_responsive_breadcrumb_lists();
 /**
  * Display archive information
  */
-if( is_category() || is_tag() || is_author() || is_date() ) {
+if(is_tag() || is_author() || is_date() ) {
 	?>
 	<h6 class="title-archive">
 		<?php
@@ -38,7 +38,7 @@ if( is_category() || is_tag() || is_author() || is_date() ) {
 		elseif( is_year() ) :
 			printf( __( 'Yearly Archives: %s', 'responsive' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 		else :
-			_e( 'Blog Archives', 'responsive' );
+			_e( 'h', 'responsive' );
 		endif;
 		?>
 	</h6>

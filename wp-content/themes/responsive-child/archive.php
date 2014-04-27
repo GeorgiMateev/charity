@@ -22,11 +22,10 @@ if( !defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
+<?php get_template_part( 'loop-header' ); ?>
 <div id="content-archive" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
 
 	<?php if( have_posts() ) : ?>
-
-		<?php get_template_part( 'loop-header' ); ?>
 
 		<?php while( have_posts() ) : the_post(); ?>
 
