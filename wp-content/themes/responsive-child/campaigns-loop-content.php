@@ -29,8 +29,8 @@
 
         <div class="progress-circle-inner"></div>
         <div class='percent'>70%</div>
-        <img src='slider-bg.png' alt='slider background' class='slider-bg' />
-        <img src='slider-bg-up.png' alt='slider background up' class='slider-bg-up' />
+        <img src='<?php echo get_stylesheet_directory_uri(); ?>/slider-bg.png' alt='slider background' class='slider-bg' />
+        <img src='<?php echo get_stylesheet_directory_uri(); ?>/slider-bg-up.png' alt='slider background up' class='slider-bg-up' />
 </div>  
 
         <!-- end of .post-entry -->
