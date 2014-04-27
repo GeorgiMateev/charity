@@ -16,18 +16,18 @@
     <?php if( $donation_items_loop->have_posts() ) : ?>
         <ul>
             <?php while( $donation_items_loop->have_posts() ) : $donation_items_loop->the_post(); ?>
-                <li>
+                <li class='need-item'>
                     <input type="hidden" class="donation-item-hidden-id" value="<?php the_ID(); ?>"/>
-                    <span><?php the_title(); ?></span>
-                    <span><?php the_content( __(  'Read more &#8250;', 'responsive' ) ); ?></span>
+                    <span class='need-title'><?php the_title(); ?></span>
+                    <span class='need-desc'><?php the_content( __(  'Read more &#8250;', 'responsive' ) ); ?></span>
 
-                    <span>Необходим брой: </span><span><?php print_custom_field('total_amount'); ?></span>
-                    <span>Събрани: </span><span id="current-amount-<?php the_ID(); ?>"><?php print_custom_field('current_amount'); ?></span>
-
+                    <span class='need-count'>Необходим брой: </span><span><?php print_custom_field('total_amount'); ?></span>
+                    <span class='need-has'>Събрани: </span><span id="current-amount-<?php the_ID(); ?>"><?php print_custom_field('current_amount'); ?></span>
+                    <span class='want-to'>Желая да даря:</span>
                     <input class="select-donation-item" name="donate-<?php the_ID(); ?>" type="checkbox" />
-
+                  
                     <div class="donation-item-wrapper" id="donation-item-wrapper-<?php the_ID(); ?>" style="display: none">
-                        <label>Количество </label><input name="amount-item-<?php the_ID(); ?>[]" type="number"><br />
+                        <label class='amount-label'>Количество </label><input name="amount-item-<?php the_ID(); ?>[]" type="number" class='amount-item-box' value='1'><br />
                     </div>
                 </li>
             <?php 
