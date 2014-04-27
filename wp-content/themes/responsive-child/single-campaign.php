@@ -98,7 +98,7 @@ get_header(); ?>
             ?>
                 <p>Въведи код от дарение:</p>
                 <form action="" method="post">
-                    <input type="text" class="enter-code" /><br/>
+                    <input type="text" class="enter-code" placeholder='' /><br/>
                     <input type="submit" class="enter-code-button" value="Въведи"/>
                 </form>
             <?php endif; ?>
