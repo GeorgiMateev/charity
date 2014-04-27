@@ -88,7 +88,7 @@ get_header(); ?>
 
 <div class="grid campaign-info">
     <div class="post-data tags-wrapper">
-        <div class="addresses-wrapper"><span class="addresses-icon"></span><?php echo get_custom_field('addresses')[0]; ?></div>
+        <div class="addresses-wrapper"><span class="addresses-icon"></span><?php echo reset(get_custom_field('addresses')); ?></div>
         <div class='cat-wrapper'><span class="cat-icon"></span><?php printf( __( 'Категория: %s', 'responsive' ), get_the_category_list( ', ' ) ); ?></div>
        <div class="end-date-wrapper"> <span class="end-date-icon"></span><?php echo get_custom_field('end_date'); ?></div>
     </div>
