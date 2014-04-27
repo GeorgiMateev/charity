@@ -18,7 +18,7 @@ get_header(); ?>
 
 		<?php get_template_part( 'loop-header' ); ?>
 
-                <?php the_widget( 'WP_Widget_Categories'); ?> 
+                <?php the_widget( 'WP_Widget_Categories', 'title= ' ); ?> 
     
 		<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 

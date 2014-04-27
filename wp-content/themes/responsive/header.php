@@ -46,6 +46,8 @@ if( !defined( 'ABSPATH' ) ) {
 
 <body <?php body_class(); ?>>
 
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/jquery.transit.min.js' ?>" ></script>
+<script>$ = jQuery;</script>   
 <?php responsive_container(); // before container hook ?>
 <div id="container" class="hfeed">
 
@@ -56,17 +58,6 @@ if( !defined( 'ABSPATH' ) ) {
 	<div id="header">
 
 		<?php responsive_header_top(); // before header content hook ?>
-
-		<?php if( has_nav_menu( 'top-menu', 'responsive' ) ) { ?>
-			<?php wp_nav_menu( array(
-								   'container'      => '',
-								   'fallback_cb'    => false,
-								   'menu_class'     => 'top-menu',
-								   'theme_location' => 'top-menu'
-							   )
-			);
-			?>
-		<?php } ?>
 
 		<?php responsive_in_header(); // header hook ?>
 
@@ -88,24 +79,6 @@ if( !defined( 'ABSPATH' ) ) {
 		<?php endif; // header image was removed (again) ?>
 
 		<?php get_sidebar( 'top' ); ?>
-		<?php wp_nav_menu( array(
-							   'container'       => 'div',
-							   'container_class' => 'main-nav',
-							   'fallback_cb'     => 'responsive_fallback_menu',
-							   'theme_location'  => 'header-menu'
-						   )
-		);
-		?>
-
-		<?php if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) { ?>
-			<?php wp_nav_menu( array(
-								   'container'      => '',
-								   'menu_class'     => 'sub-header-menu',
-								   'theme_location' => 'sub-header-menu'
-							   )
-			);
-			?>
-		<?php } ?>
 
 		<?php responsive_header_bottom(); // after header content hook ?>
 

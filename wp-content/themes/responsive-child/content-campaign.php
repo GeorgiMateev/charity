@@ -81,4 +81,3 @@ if(isset($_POST)) {
         </script>
 </article>
 </div><!-- #post-## -->
-<?php get_sidebar(); ?>
