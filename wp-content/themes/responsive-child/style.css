@@ -218,15 +218,7 @@ body
   color:#fff;
   text-shadow:0px 0px 50px #fff;
 }
-.widget_categories h2
-{
-    display:inline-block;
-    border:1px solid red; 
-    margin:0px;
-    padding:0;
-    position:absolute;
-    top:0px;  
-}
+
 .cat-item
 {
   list-style:none;
