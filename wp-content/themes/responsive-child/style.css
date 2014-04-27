@@ -228,8 +228,9 @@ body
 {
   display:none;
 }
-.next, .previous
+.tags-wrapper
 {
-  color:#0999d2;
-  
+  position:absolute;
+  bottom:0px;
+
 }
