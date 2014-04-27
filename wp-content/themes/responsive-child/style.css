@@ -39,7 +39,7 @@ body
 }
 #header
 {
-	
+	background-color:#fff;
 }
 #content-full
 {
@@ -218,9 +218,18 @@ body
   color:#fff;
   text-shadow:0px 0px 50px #fff;
 }
-
+  
 .cat-item
 {
   list-style:none;
 
+}
+.skip-container
+{
+  display:none;
+}
+.next, .previous
+{
+  color:#0999d2;
+  
 }
