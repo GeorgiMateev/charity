@@ -42,6 +42,11 @@ if(isset($_POST)) {
             
             <h4>Има нужда от:</h4>
             <?php get_template_part("donation-items-form"); ?>
+            
+            <div class="post-data tags-wrapper">
+		<span class="tag-icon"></span><?php the_tags( __( 'Тагове:', 'responsive' ) . ' ', ', ', '<br />' ); ?>
+		<span class="cat-icon"></span><?php printf( __( 'Категория: %s', 'responsive' ), get_the_category_list( ', ' ) ); ?>
+            </div>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
         

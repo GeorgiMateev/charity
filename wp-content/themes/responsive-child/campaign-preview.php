@@ -18,6 +18,11 @@
 			
             <?php the_content( __(  'Read more &#8250;', 'responsive' ) );	?>		
             <?php echo get_custom_field('addresses')[0]; ?>
+            
+            <div class="post-data tags-wrapper">
+		<span class="tag-icon"></span><?php the_tags( __( 'Тагове:', 'responsive' ) . ' ', ', ', '<br />' ); ?>
+		<span class="cat-icon"></span><?php printf( __( 'Категория: %s', 'responsive' ), get_the_category_list( ', ' ) ); ?>
+            </div>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 </article><!-- #post-## -->
