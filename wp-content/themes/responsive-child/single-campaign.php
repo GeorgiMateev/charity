@@ -52,7 +52,8 @@ get_header(); ?>
 					<?php endif; // no description, no author's meta ?>
 
 					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
-				</div>
+				</div>                           
+                                
 				<!-- end of .post-entry -->
 
 				<div class="navigation">
@@ -84,6 +85,24 @@ get_header(); ?>
 	?>
 
 </div><!-- end of #content -->
+
+<div class="grid campaign-info">
+    <div class="post-data tags-wrapper">
+        <div class="addresses-wrapper"><span class="addresses-icon"></span><?php echo get_custom_field('addresses')[0]; ?></div>
+        <div class='cat-wrapper'><span class="cat-icon"></span><?php printf( __( 'Категория: %s', 'responsive' ), get_the_category_list( ', ' ) ); ?></div>
+       <div class="end-date-wrapper"> <span class="end-date-icon"></span><?php echo get_custom_field('end_date'); ?></div>
+    </div>
+
+     <?php $current_user_id = get_current_user_id();
+                if($current_user_id == $post->post_author):
+            ?>
+                <p>Въведи код от дарение:</p>
+                <form action="" method="post">
+                    <input type="text" class="enter-code" /><br/>
+                    <input type="submit" class="enter-code-button" value="Въведи"/>
+                </form>
+            <?php endif; ?>
+</div>
 
 
 <?php get_footer(); ?>

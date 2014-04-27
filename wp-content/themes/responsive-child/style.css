@@ -271,3 +271,47 @@ body
   overflow:hidden;
 
 }
+
+.campaign-info
+{
+    float: right;
+    margin-right: 80px;
+}
+
+.campaign-info .tags-wrapper
+{
+    position: relative;
+    margin-top: 140px;
+}
+
+.campaign-info .enter-code-button
+{
+    background: none;
+    background-color: #0999d2;
+    color: white;
+    font-weight: lighter;
+    text-shadow: none;
+    letter-spacing: 0.5px;
+}
+
+.donation-items-form .submit-donation-button
+{
+    background: none;
+    background-color: #f9911e;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-shadow: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    width: 100px;
+}
+
+.donation-items-form .submit-donation-button:hover
+{
+    background: none;
+    color: #0999d2;
+    background-color:white;
+    border-color: #0999d2;
+}

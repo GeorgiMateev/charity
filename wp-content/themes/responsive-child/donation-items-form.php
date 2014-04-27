@@ -6,7 +6,7 @@
  */
 ?>
 
-<form action="campaigns/donation/" method="POST">
+<form action="campaigns/donation/" method="POST" class="donation-items-form">
     <?php $campaign_id = $_GET["p"];
         $donation_items_loop = new WP_Query( array( 'post_type' => 'donation-item',
                                               'posts_per_page' => 100,
@@ -36,7 +36,7 @@
         </ul>
     
         <input type="hidden" value="<?php echo $campaign_id; ?>" name="campaign_id"/>
-        <input type="submit" value="Дари!">
+        <input type="submit" class="submit-donation-button" value="Дари!" >
     <?php else :
             get_template_part( 'loop-no-posts' );
         endif;
