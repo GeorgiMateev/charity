@@ -291,10 +291,12 @@ body
 {
     background: none;
     background-color: #0999d2;
-    color: white;
-    font-weight: lighter;
+    color:white;
+    font-weight:normal;
     text-shadow: none;
     letter-spacing: 0.5px;
+    margin-top:5px;
+    width:170px;
 }
 
 .donation-items-form .submit-donation-button
@@ -308,7 +310,9 @@ body
     font-weight: bold;
     border: none;
     border-radius: 3px;
-    width: 100px;
+    width: 200px;
+    height:40px;
+    margin-left:20px;
 }
 
 .donation-items-form .submit-donation-button:hover
@@ -375,4 +379,4 @@ body
 .aside-wrapper
 {
   position:relative !important;
-}
+} 
