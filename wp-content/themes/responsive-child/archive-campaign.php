@@ -17,8 +17,19 @@ get_header(); ?>
 	<?php if( $loop->have_posts() ) : ?>
 
 		<?php get_template_part( 'loop-header' ); ?>
-
-                <?php the_widget( 'WP_Widget_Categories', 'title= ' ); ?> 
+                
+        <div class="sorting-wrapper">
+            <span>Филтрирай по</span>
+            <ul>
+                <li><a href="#">място</a></li>
+                <li><a href="#">срок</a></li>
+                <li>
+                    <a href="#">категория</a>
+                    <?php the_widget( 'WP_Widget_Categories', 'title= ' ); ?> 
+                </li>
+            </ul>
+        </div>
+                
     
 		<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 
